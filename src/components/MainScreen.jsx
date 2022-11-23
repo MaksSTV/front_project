@@ -4,7 +4,12 @@ const MainScreen = function(){
 
       return (
         <div className='main--container'>
-          Hello
+          <div className="images"></div>
+          <div className="images"></div>
+          <div className="images"></div>
+          <div className="images"></div>
+          <div className="images"></div>
+          
         </div>
       );
 }

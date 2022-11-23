@@ -8,9 +8,9 @@ import SideBar from "./components/SideBar";
 function App() {
 
 
-  return (
+  return (//body == App
     <div className="App">
-      <div>
+      <div className='header'>
         <Nav/>
       </div>
       <div className="main">

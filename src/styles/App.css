@@ -1,0 +1,119 @@
+
+
+.navigation{
+    background-color: rgb(183, 179, 179);
+}
+
+a{
+    text-decoration: none;
+    border: none
+}
+
+.nav--list{
+    height: 85px;
+    /*padding: 0 20px 0 20px;*/
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    /*gap: 10%;*/
+}
+
+.nav--list-item{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+}
+
+.nav--list-item:nth-child(2),
+.nav--list-item:nth-child(3),
+.nav--list-item:nth-child(4),
+.nav--list-item:nth-child(5),
+.nav--list-item:nth-child(6){
+    margin: 0 35px 0 35px;
+}
+
+.nav--list-item:first-child{
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+.nav--list-item:nth-child(7){
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.nav--list-item-link,
+.sidebar--list-item-link,
+.sidebar--list-item-link path{
+    color: #fff;
+    cursor: pointer;
+    transition: 0.7s;
+    fill: #fff;
+}
+
+.nav--list-item-link:hover,
+.sidebar--list-item-link:hover,
+.sidebar--list-item-link:hover path{
+    color:rgb(0, 0, 0);
+    transition: 0.7s;
+    fill: rgb(0, 0, 0);
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+
+.main--container{
+    width: 85%;
+    height: 300vh;
+    background-color: rgb(188, 47, 134);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side--container{
+    width: 15%;
+    background-color: rgb(120, 67, 100);
+   
+    
+}
+
+.sidebar--list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+
+
+.sidebar--list-item{
+    margin: 20px 0 0 30%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    
+}
+
+.sidebar--list-item-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.images{
+    width: 500px;
+    height: 500px;
+    background-image: url(../images/pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
