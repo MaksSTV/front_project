@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const Counter = function(props){
+const Counter = function(){
 
-    console.log(props);
+    console.log();
 
     const [count, setCount] = useState(0)
 
@@ -16,7 +16,7 @@ const Counter = function(props){
 
       return (
         <div>
-          <h1>{props.post.title}</h1>
+          <h1>{count}</h1>
           
           <button onClick={increment}>Increment</button>
           <button onClick={decrement}>Decrement</button>
