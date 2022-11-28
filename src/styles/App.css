@@ -191,3 +191,23 @@ a{
 .img__item{
     height: inherit;
 }
+
+.counter__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.button__buy-food{
+    background-color: transparent;
+    border: 2px solid #D6814A;
+    border-radius: 60px;
+}
+
+.counter__title{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
