@@ -97,8 +97,8 @@ const SideBar = function () {
           </a>
         </li>
         <li className="sidebar--list-item">
-          <a href="/" className="sidebar--list-item-link">
-            Бургеры{" "}
+          <a href="#burger" className="sidebar--list-item-link">
+            Бургеры
             <svg
               className="sidebar--list-item-link"
               width="34"
@@ -115,8 +115,8 @@ const SideBar = function () {
           </a>
         </li>
         <li className="sidebar--list-item">
-          <a href="/" className="sidebar--list-item-link">
-            ВОК{" "}
+          <a href="#wok" className="sidebar--list-item-link">
+            ВОК
             <svg
               className="sidebar--svg"
               width="34"
@@ -133,8 +133,8 @@ const SideBar = function () {
           </a>
         </li>
         <li className="sidebar--list-item">
-          <a href="/" className="sidebar--list-item-link">
-            Питса{" "}
+          <a href="#pizza" className="sidebar--list-item-link">
+            Пицца
             <svg
               className="sidebar--svg"
               width="34"
@@ -151,7 +151,7 @@ const SideBar = function () {
           </a>
         </li>
         <li className="sidebar--list-item">
-          <a href="/" className="sidebar--list-item-link">
+          <a href="#soup" className="sidebar--list-item-link">
             Супы{" "}
             <svg
               className="sidebar--svg"
@@ -181,8 +181,8 @@ const SideBar = function () {
           </a>
         </li>
         <li className="sidebar--list-item">
-          <a href="/" className="sidebar--list-item-link">
-            Десерты{" "}
+          <a href="#dessert" className="sidebar--list-item-link">
+            Десерты
             <svg
               className="sidebar--svg"
               width="42"

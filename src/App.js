@@ -17,6 +17,9 @@ function App() {
         <SideBar />
         <MainScreen />
       </div>
+      <div className="footer">
+        
+      </div>
     </div>
   );
 }

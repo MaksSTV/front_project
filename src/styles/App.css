@@ -140,6 +140,12 @@ a{
     border-radius: 20px;
     text-align: center;
     padding-bottom: 15px;
+    transition: 0.5s;
+}
+
+.menu__item:hover{
+    background-color: #2c2c2c;
+    transition: 0.5s;
 }
 
 .side--container{
@@ -197,17 +203,65 @@ a{
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .button__buy-food{
     background-color: transparent;
     border: 2px solid #D6814A;
     border-radius: 60px;
+    transition: 0.5s;
 }
+
+.button__buy-food:hover{
+    background-color: #D6814A;
+}
+
 
 .counter__title{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
     font-size: 24px;
+}
+
+
+.title__item{
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.description__item{
+    max-width: 200px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.price{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.buy_item-btn{
+    width: 90px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #D6814A;
+    border-radius: 20px;
+    color: #E5E5E5;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.buy_item-btn:hover{
+    background-color: #D6814A;
+    transition: 0.5s;
 }

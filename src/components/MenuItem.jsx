@@ -12,6 +12,7 @@ const MenuItem = function(props){
             <div className="buy_item">
                 <p className="price">{props.item.price}</p>
                 <Counter/>
+                <button className="buy_item-btn">Добавить</button>
             </div>
         </div>
       );
