@@ -4,6 +4,7 @@ import MainScreen from './components/MainScreen';
 import Nav from './components/Nav';
 
 import SideBar from "./components/SideBar";
+import Footer from './components/Footer';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
         <MainScreen />
       </div>
       <div className="footer">
-        
+        <Footer/>
       </div>
     </div>
   );
