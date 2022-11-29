@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 const Footer = function(){
       
@@ -7,11 +7,11 @@ const Footer = function(){
             <div className="footer__lists">
                 <div className="footer__nav">
                     <ul className="list__nav">
-                        <li className="list__nav-item">Главная</li>
-                        <li className="list__nav-item">Меню</li>
-                        <li className="list__nav-item">Отзывы</li>
-                        <li className="list__nav-item">О нас</li>
-                        <li className="list__nav-item">Доставка</li>
+                        <li className="list__nav-item"><Link className="nav--list-item-link" to='/main'>Главная</Link></li>
+                        <li className="list__nav-item"><Link className="nav--list-item-link" to='/menu'>Меню</Link></li>
+                        <li className="list__nav-item"><Link className="nav--list-item-link" to='/reviews'>Отзывы</Link></li>
+                        <li className="list__nav-item"><Link className="nav--list-item-link" to='/about'>О нас</Link></li>
+                        <li className="list__nav-item"><Link className="nav--list-item-link" to='/delivery'>Доставка</Link></li>
                     </ul>
                 </div>
                 <div className="footer__contact">
