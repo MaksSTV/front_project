@@ -10,7 +10,7 @@ import Reviews from '../pages/Reviews';
 const RouteNav = function(){
   
     return (
-        <BrowserRouter>
+      <BrowserRouter>
         <div className='header'>
           <Nav/>
         </div>

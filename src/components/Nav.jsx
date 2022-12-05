@@ -12,7 +12,7 @@ const Nav = function(){
             <li className="nav--list-item"><Link className="nav--list-item-link" to='/reviews'>Отзывы</Link></li>
             <li className="nav--list-item"><Link className="nav--list-item-link" to='/about'>О нас</Link></li>
             <li className="nav--list-item"><Link className="nav--list-item-link" to='/delivery'>Доставка</Link></li>
-            <li className="nav--list-item"><Link className="nav--list-item-link" to='/menu'>Корзина</Link></li>
+            <li className="nav--list-item"><Link className="nav--list-item-link" to='/menu'>+7-880-555-35-55</Link></li>
           </ul>
         </div>
       );
