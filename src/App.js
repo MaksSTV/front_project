@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <button onClick={onClose}>Закрыть</button>
+      <span>{tg.initDataUnsafe?.user?.username}</span>
       <RouteNav/>
     </div>
   );
