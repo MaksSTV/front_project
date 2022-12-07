@@ -1,4 +1,3 @@
-import Counter from "./Counter";
 import React, { useState } from "react";
 
 const MenuItem = function (props) {

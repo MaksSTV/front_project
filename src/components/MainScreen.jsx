@@ -37,7 +37,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const MainScreen = function () {
 
-  const [pizza, setPizza] = useState([
+  const [pizza] = useState([
     { id: 1, title: 'Ассорти', body: 'Оливки, перец, листья, сыр, помидор, грибы, мясо', price: 450, img: p1 },
     { id: 2, title: 'Пепперони', body: 'Пепперони, сыр', price: 450, img: p2 },
     { id: 3, title: 'Сезонная', body: 'Лук, руккола, грибы, помидор', price: 450, img: p3 },
@@ -48,7 +48,7 @@ const MainScreen = function () {
     { id: 8, title: 'Мексиканская', body: 'Халапеньо, сыр, бекон, помидор', price: 450, img: p8 }
   ])
 
-  const [burger, setBurger] = useState([
+  const [burger] = useState([
     { id: 1, title: 'Классический', body: 'Бекон, сыр, котлета, помидор, салат', price: 450, img: b1 },
     { id: 2, title: 'Уголек', body: 'Cалат, кетчуп, котлета, сыр, помидор, лук, моцарелла', price: 450, img: b2 },
     { id: 3, title: 'Малыш', body: 'Котлета, маринованные огурцы, соус, сыр', price: 249, img: b3 },
@@ -59,7 +59,7 @@ const MainScreen = function () {
     { id: 8, title: 'Фирменный', body: 'Бекон, сыр, котлета, помидор, салат, яичница', price: 450, img: b8 }
   ])
 
-  const [soup, setSoup] = useState([
+  const [soup] = useState([
     { id: 1, title: 'Рамен с говядиной', body: 'Лапша, бульон, говядина, зеленый лук, перец чили, кинза', price: 450, img: s1 },
     { id: 2, title: 'Крем суп из шпината', body: 'Шпинат, бульон, сливки, зелень', price: 450, img: s2 },
     { id: 3, title: 'Грибной крем суп с гренками', body: 'Бульон, грибы, сливки, гренки', price: 450, img: s3 },
@@ -68,14 +68,14 @@ const MainScreen = function () {
     { id: 6, title: 'Тыквенный крем суп', body: 'Бульон, тыква, сливки, зелень', price: 450, img: s6 }
   ])
 
-  const [wok, setWok] = useState([
+  const [wok] = useState([
     { id: 1, title: 'Вок 1', body: 'Лапша пшеничная, тофу, болгарский перец, морковь', price: 450, img: w1 },
     { id: 2, title: 'Вок 2', body: 'Лапша гречневая, морепродукты, болгарский перец, стручковая фасоль', price: 450, img: w2 },
     { id: 3, title: 'Вок 3', body: 'Лапша пшеничная, креветки, болгарский перец, морковь, бобы', price: 450, img: w3 },
     { id: 4, title: 'Вок 4', body: 'Лапша пшеничная, курица, болгарский перец', price: 450, img: w4 }
   ])
 
-  const [dessert, setDessert] = useState([
+  const [dessert] = useState([
     { id: 1, title: 'Тирамису', body: '', price: 450, img: d1 },
     { id: 2, title: 'Чизкейк', body: '', price: 450, img: d2 },
     { id: 3, title: 'Медовик', body: '', price: 450, img: d3 },
