@@ -29,7 +29,8 @@ const MenuItem = function (props) {
         id: props.item.id,
         title: props.item.title,
         price: props.item.price,
-        amount: count
+        amount: count,
+        total: count * props.item.price
 
     };
 
@@ -43,7 +44,7 @@ const MenuItem = function (props) {
             <h1 className="title__item">{props.item.title}</h1>
             <p className="description__item">{props.item.body}</p>
             <div className="buy_item">
-                <p className="price">{props.item.price}</p>
+                <p className="price">{props.item.price}р.</p>
                 <div className="counter__container">
 
 
