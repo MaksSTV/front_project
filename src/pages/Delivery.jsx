@@ -13,7 +13,6 @@ const Delivery = function(){
 
     const onSendData = useCallback(() =>{
         const data = {
-            name: tg.initDataUnsafe?.user?.username,
             street,
             house,
             subject,
