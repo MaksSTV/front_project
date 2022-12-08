@@ -14,16 +14,18 @@ const RouteNav = function(){
         <div className='header'>
           <Nav/>
         </div>
-        <Routes>
-          <Route path='/' element={<Menu/>}/>
-          <Route path='/main' element={<Main/>}/>
-          <Route path='/menu' element={<Menu/>}/>
-          <Route path='/reviews' element={<Reviews/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/delivery' element={<Delivery/>}/>
-        </Routes>
-        <div className="footer">
-          <Footer/>
+        <div className="main__container">
+          <Routes>
+            <Route path='/' element={<Menu/>}/>
+            <Route path='/main' element={<Main/>}/>
+            <Route path='/menu' element={<Menu/>}/>
+            <Route path='/reviews' element={<Reviews/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/delivery' element={<Delivery/>}/>
+          </Routes>
+          <div className="footer">
+            <Footer/>
+          </div>
         </div>
       </BrowserRouter>
     );
