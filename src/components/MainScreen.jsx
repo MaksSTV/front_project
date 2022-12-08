@@ -100,17 +100,18 @@ const MainScreen = function () {
     
     setObj([...obj, prod])
     setProducts([...products, newProduct])
-
-    if(obj.length === 0){
-      tg.MainButton.hide();
-    } else{
-      tg.MainButton.show();
-      tg.setParams({
-        text: `Купить ${getTotalPrice(obj)}`
-      })
-    }
+    
 
   }
+  if(obj.length === 0){
+    tg.MainButton.hide();
+  } else{
+    tg.MainButton.show();
+    tg.MainButton.setParams({
+      text: `Купить ${getTotalPrice(obj)}`
+    })
+  }
+  
 
   function deleteOrder(){
     setObj([])
