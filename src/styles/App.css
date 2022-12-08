@@ -132,7 +132,8 @@ a{
         position: fixed;
         background-color: #171717;
         overflow: hidden;
-        margin-top: -20px;
+        margin-top: -40px;
+        padding-top: 40px;
         z-index: 99998;
     }
     .nav--list a{
