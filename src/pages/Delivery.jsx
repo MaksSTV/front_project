@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { useCallback } from "react";
 
 const tg = window.Telegram.WebApp;
 
@@ -9,6 +10,23 @@ const Delivery = function(){
     const [house, setHouse] = useState('')
     const [subject, setSubject] = useState('physical')
     const [zone, setZone] = useState('Zone I')
+
+    const onSendData = useCallback(() =>{
+        const data = {
+            name: tg.initDataUnsafe?.user?.username,
+            street,
+            house,
+            subject,
+        }
+        tg.sendData(JSON.stringify(data))
+    }, [street, house, subject])
+
+    useEffect(() =>{
+        tg.WebApp.onEvent('mainButtonClicked', onSendData)
+        return()=>{
+            tg.WebApp.offEvent('mainButtonClicked', onSendData)
+        }
+    }, [onSendData])
 
     useEffect(() => {
         tg.MainButton.setParams({
