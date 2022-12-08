@@ -1,4 +1,45 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
+const tg = window.Telegram.WebApp;
+
 const Delivery = function(){
+
+    const [street, setStreet] = useState('')
+    const [house, setHouse] = useState('')
+    const [subject, setSubject] = useState('physical')
+    const [zone, setZone] = useState('Zone I')
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: 'Отправить данные'
+        })
+    }, [])
+
+    useEffect(() => {
+        if(!street || !house){
+            tg.MainButton.hide();
+        }
+        else{
+            tg.MainButton.show();
+        }
+    }, [street, house])
+
+    const onChangeStreet = (e) => {
+        setStreet(e.target.value)
+    }
+
+    const onChangeHouse = (e) => {
+        setHouse(e.target.value)
+    }
+
+    const onChangeSubject = (e) => {
+        setSubject(e.target.value)
+    }
+
+    const onChangeZone = (e) => {
+        setZone(e.target.value)
+    }
       
     return (
         <div className="container__delivery">
@@ -14,7 +55,7 @@ const Delivery = function(){
                 </p>
                 <div className={"form"}>
             
-                    <select  className={'select'}>
+                    <select value={zone} onChange={onChangeZone} className={'select'}>
                         <option value={'first__zone'}>Зона I</option>
                         <option value={'second__zone'}>Зона II</option>
                         <option value={'third__zone'}>Зона III</option>
@@ -23,17 +64,17 @@ const Delivery = function(){
                         className={'input'}
                         type="text"
                         placeholder={'Улица'}
-                        /*value={country}
-                        onChange={onChangeCountry}*/
+                        value={street}
+                        onChange={onChangeStreet}
                     />
                     <input
                         className={'input'}
                         type="text"
                         placeholder={'Дом'}
-                        /*value={street}
-                        onChange={onChangeStreet}*/
+                        value={house}
+                        onChange={onChangeHouse}
                     />
-                    <select  className={'select'}>
+                    <select value={subject} onChange={onChangeSubject} className={'select'}>
                         <option value={'physical'}>Физ. лицо</option>
                         <option value={'legal'}>Юр. лицо</option>
                     </select>
