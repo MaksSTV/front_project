@@ -12,8 +12,7 @@ const Delivery = function(){
 
     useEffect(() => {
         tg.MainButton.setParams({
-            text: 'Отправить данные',
-            color: 292929
+            text: 'Отправить данные'
         })
     }, [])
 
