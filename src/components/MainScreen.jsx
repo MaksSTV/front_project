@@ -31,6 +31,8 @@ import d3 from "../images/desserts/d3.png"
 import d4 from "../images/desserts/d4.png"
 import d5 from "../images/desserts/d5.png"
 import { useState } from "react";
+import { useCallback } from "react";
+import { useEffect } from "react";
 import shop_cart from "../images/cart.svg"
 import { v4 as uuidv4 } from 'uuid';
 
@@ -92,6 +94,29 @@ const MainScreen = function () {
 
   const [products, setProducts] = useState([]) 
   const [obj, setObj] = useState([]) 
+
+  const onSendData = useCallback(() =>{
+    const data = {
+      meals: obj,
+      totalPrice: getTotalPrice(obj),
+      queryId: tg.initDataUnsafe?.query_id,
+
+    }
+    fetch('http://localhost:8000', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+  }, [obj])
+
+  useEffect(() =>{
+      tg.onEvent('mainButtonClicked', onSendData)
+      return()=>{
+          tg.offEvent('mainButtonClicked', onSendData)
+      }
+  }, [onSendData])
 
 
   function addProduct(newProduct){
