@@ -34,6 +34,13 @@ import { useState } from "react";
 import shop_cart from "../images/cart.svg"
 import { v4 as uuidv4 } from 'uuid';
 
+const tg = window.Telegram.WebApp;
+
+const getTotalPrice = (items) =>{
+  return items.reduce((acc, item) =>{
+    return acc += item.total
+  }, 0)
+}
 
 const MainScreen = function () {
 
@@ -93,6 +100,15 @@ const MainScreen = function () {
     
     setObj([...obj, prod])
     setProducts([...products, newProduct])
+
+    if(obj.length === 0){
+      tg.MainButton.hide();
+    } else{
+      tg.MainButton.show();
+      tg.setParams({
+        text: `Купить ${getTotalPrice(obj)}`
+      })
+    }
 
   }
 
