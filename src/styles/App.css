@@ -456,6 +456,13 @@ a{
     margin-bottom: 50px;
 }
 
+@media (max-width: 500px) {
+    .menu__title{
+        margin-bottom: 30px;
+        margin-top: 50px;
+    }
+}
+
 .grid__item{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
