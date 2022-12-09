@@ -102,7 +102,7 @@ const MainScreen = function () {
       queryId: tg.initDataUnsafe?.query_id,
 
     }
-    fetch('http://5.61.44.64:8000/web-data', {
+    fetch('http://192.168.0.2:8000/web-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
