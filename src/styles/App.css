@@ -7,6 +7,9 @@ html{
     color: #E5E5E5;
     /*flex: 1 0 auto;*/
 }
+.side-menu {
+    display: none;
+}
 
 .number__logo{
     fill: #E5E5E5;
@@ -185,10 +188,6 @@ a{
     .hamb-line::after{
         top: -5px;
     }
-    
-    .side-menu {
-        display: none;
-    }
 
     /* Toggle menu icon */
     .side-menu:checked ~ nav{
@@ -329,6 +328,20 @@ a{
     top: 80vh;  
 }
 
+@media (max-width: 1100px) {
+    .side-button-1-wr {  
+       right: 30px;
+       top: 80vh;  
+   }
+}
+
+@media (max-width: 600px) {
+    .side-button-1-wr {  
+       right: 20px;
+       top: 80vh;  
+   }
+}
+
 .side-button-1 .side-b {
     margin: 10px;
     width: 80px;
@@ -351,6 +364,24 @@ a{
 
 #side-checkbox:checked + .side-button-1-wr {
     left: 10px; 
+}
+
+@media (max-width: 500px) {
+
+    .side-panel {   
+        width: 92vw;
+        right: -110vw;
+    }
+    #side-checkbox:checked + .side-button-1-wr {
+        left: 0; 
+    }
+}
+
+@media (max-width: 440px) {
+
+    .side-panel {   
+        width: 90vw;
+    }
 }
 /* Оформление кнопки на панеле */
 .side-button-2 {
@@ -410,6 +441,13 @@ a{
     margin: 100px 100px 150px 100px;
 }
 
+@media (max-width: 570px) {
+    .menu{
+        margin: 100px 40px 150px 40px;
+    }
+}
+
+
 .menu__title{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
@@ -423,6 +461,19 @@ a{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
 }
+
+@media (max-width: 570px) {
+    .grid__item{
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    }
+}
+
+@media (max-width: 460px) {
+    .grid__item{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
 .menu__item{
     display: flex;
     flex-direction: column;
@@ -457,6 +508,8 @@ a{
 
 
 
+
+
 .sidebar--list-item{
     margin: 20px 0 0 30%;
     font-family: 'Roboto Condensed', sans-serif;
@@ -471,6 +524,41 @@ a{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media (max-width: 1400px) {
+    .sidebar--list-item{
+        margin: 20px 0 0 10%; 
+    }
+    
+    .sidebar--list-item-link{
+        gap: 7px;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    .sidebar--list{
+        align-items: center;
+    }
+
+    .sidebar--list-item{
+        margin: 20px 0 0 0; 
+    }
+
+    .sidebar--list-item-link-text{
+        display: none;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    .sidebar--logo{
+        display: none;
+    }
+
 }
 /*
 .images{
