@@ -97,19 +97,12 @@ const MainScreen = function () {
 
   const onSendData = useCallback(() =>{
     const data = {
-      meals: obj,
-      totalPrice: getTotalPrice(obj),
-      queryId: tg.initDataUnsafe?.query_id,
-
+      type: "products",
+      items: products,
+      totalPrice: getTotalPrice(addedItems)
     }
-    fetch('http://5.159.103.9:8000/web-data', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    })
-  }, [obj])
+    tg.sendData(JSON.stringify(data));
+  }, [products])
 
   useEffect(() =>{
       tg.onEvent('mainButtonClicked', onSendData)
@@ -124,16 +117,16 @@ const MainScreen = function () {
     
     
     setObj([...obj, prod])
-    setProducts([...products, newProduct])
+    setProducts([...products, prod])
     
 
   }
-  if(obj.length === 0){
+  if(products.length === 0){
     tg.MainButton.hide();
   } else{
     tg.MainButton.show();
     tg.MainButton.setParams({
-      text: `Купить ${getTotalPrice(obj)}`
+      text: `Купить ${getTotalPrice(products)}`
     })
   }
   
@@ -152,7 +145,7 @@ const MainScreen = function () {
           <div className="side-title">Корзина:</div>
           <div> 
             <ul className="text-right-list">
-              {obj.map((item) => <li className="text-right-list-item" key={uuidv4()}>{item.title} {item.amount}шт: {item.total}р</li>)}
+              {products.map((item) => <li className="text-right-list-item" key={uuidv4()}>{item.title} {item.amount}шт: {item.total}р</li>)}
             </ul>
           </div>
           <div className="side-panel-order">
