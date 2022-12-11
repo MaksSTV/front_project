@@ -18,7 +18,7 @@ const Delivery = function(){
             house
         }
         tg.sendData(JSON.stringify(data))
-    }, [street, house, subject])
+    }, [street, house])
 
     useEffect(() =>{
         tg.onEvent('mainButtonClicked', onSendData)
