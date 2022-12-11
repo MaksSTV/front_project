@@ -99,7 +99,7 @@ const MainScreen = function () {
     const data = {
       type: "products",
       items: products,
-      totalPrice: getTotalPrice(addedItems)
+      totalPrice: getTotalPrice(products)
     }
     tg.sendData(JSON.stringify(data));
   }, [products])
