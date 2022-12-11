@@ -13,9 +13,9 @@ const Delivery = function(){
 
     const onSendData = useCallback(() =>{
         const data = {
+            type: "delivery",
             street,
-            house,
-            subject,
+            house
         }
         tg.sendData(JSON.stringify(data))
     }, [street, house, subject])
