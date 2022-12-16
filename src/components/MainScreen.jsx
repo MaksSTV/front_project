@@ -162,7 +162,7 @@ const MainScreen = function () {
       <List items={wok} title="ВОК" anchor="wok" add={addProduct}/>
       <List items={pizza} title="Пиццы" anchor="pizza" add={addProduct}/>
       <List items={soup} title="Супы" anchor="soup" add={addProduct}/>
-      <List items={dessert} title="Дессерты" anchor="dessert" add={addProduct}/>
+      <List items={dessert} title="Десерты" anchor="dessert" add={addProduct}/>
 
     </div>
   );

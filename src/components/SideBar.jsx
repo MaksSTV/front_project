@@ -183,7 +183,7 @@ const SideBar = function () {
         </li>
         <li className="sidebar--list-item">
           <a href="#dessert" className="sidebar--list-item-link">
-          <p className="sidebar--list-item-link-text">Дессерты</p>
+          <p className="sidebar--list-item-link-text">Десерты</p>
             <svg
               className="sidebar--svg"
               width="42"
